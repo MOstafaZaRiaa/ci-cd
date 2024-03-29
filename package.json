@@ -10,6 +10,7 @@
     "create-nodejs-ts": "cmd/create-nodejs-ts/index.js"
   },
   "scripts": {
+    "post-build" : "cp package.json dist/" ,
     "start": "node dist/main.js",
     "start:dev": "nodemon --ext js,ts,json,env --exec 'node --experimental-specifier-resolution=node --loader ts-node/esm' src/main.ts",
     "prepare": "husky install",
